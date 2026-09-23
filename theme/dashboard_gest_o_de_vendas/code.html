@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#adc6ff","primary-fixed-dim":"#adc6ff","error":"#ba1a1a","on-error":"#ffffff","tertiary-fixed":"#dae2fd","surface-bright":"#f8f9ff","on-primary-container":"#fefcff","on-tertiary":"#ffffff","on-tertiary-container":"#fefcff","on-secondary-container":"#6f6300","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","on-secondary-fixed":"#201c00","on-surface-variant":"#414754","inverse-on-surface":"#eaf1ff","on-secondary-fixed-variant":"#504700","secondary-fixed":"#fde400","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","primary-fixed":"#d8e2ff","outline-variant":"#c1c6d6","tertiary-container":"#6c748b","on-tertiary-fixed-variant":"#3f465c","surface-container":"#e5eeff","primary":"#0058bb","on-primary-fixed-variant":"#004493","on-tertiary-fixed":"#131b2e","error-container":"#ffdad6","outline":"#727785","tertiary":"#545c72","background":"#f8f9ff","primary-container":"#1171e7","secondary-container":"#fae100","secondary-fixed-dim":"#dec800","on-error-container":"#93000a","surface":"#f8f9ff","surface-variant":"#d3e4fe","on-background":"#0b1c30","surface-tint":"#005bc0","on-surface":"#0b1c30","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#bec6e0","secondary":"#6a5f00","on-primary-fixed":"#001a41","on-secondary":"#ffffff","on-primary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-desktop":"2rem","space-3xl":"3rem","margin":"1rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","space-md":"0.75rem","space-lg":"1rem","space-2xs":"0.125rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-2xl":"2rem"},fontFamily:{"body-lg":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"label-md":["Inter"],"data-mono":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"]},fontSize:{"body-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"label-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"600"}],"body-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"400"}],"headline-lg-mobile":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"headline-xl":["2rem",{lineHeight:"2.5rem",fontWeight:"700"}],"headline-xl-mobile":["1.5rem",{lineHeight:"2rem",fontWeight:"700"}],"label-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"600"}],"data-mono":["0.8125rem",{lineHeight:"1rem",fontWeight:"500"}],"headline-md":["1.125rem",{lineHeight:"1.5rem",fontWeight:"600"}],"headline-lg":["1.5rem",{lineHeight:"2rem",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest/60"><img alt="CompFast Admin Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W-7A6YSJhhixi6vcYpi1ngPVt3LqIO6guIOtaXH_ixrBo8-EWm014uv60XIfJnL4BRmfx5iCCeZCrwooI5388BNhteTxnfI4Li3vfo8rAqcNmGL4l2MtgNYIq6MMq7OuB-8Azjj1UXA0Q8UGi_PGMxxqgtDovO81wcExyUk8LFGYNie0MwtRkPPLp-QiFiO0AqyKZ84Q_-RAcmrSWsPKw5ygTzgnq2BsiXMnJi-VptSDe1JbdyvnGS2mM"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-tight font-bold tracking-tight">CompFast</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Backoffice</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Visão Geral</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-vendas" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Dashboard & Vendas</span></a></nav></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Catálogo</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="produtos" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Produtos & Estoque</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="categorias" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Categorias</span></a></nav></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Marketing & Vendas</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cupons-de-desconto" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span>Cupons de Desconto</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="promocoes" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promoções</span></a></nav></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Administração</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="clientes-cadastrados" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Clientes Cadastrados</span></a></nav></div></div><div class="p-space-md m-space-md bg-surface-container rounded-xl flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Supabase Cloud</span></div><div class="font-data-mono text-data-mono text-outline truncate">compfast-db.supabase.co</div><div class="flex items-center justify-between mt-space-2xs"><span class="font-label-sm text-label-sm text-on-surface-variant">PostgreSQL 15</span><span class="px-space-xs py-space-2xs bg-emerald-100 text-emerald-800 rounded font-label-sm text-label-sm font-semibold">Ativo</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Buscar pedidos, produtos, códigos SKU ou clientes..." type="text"/></div><div class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low rounded-lg shrink-0 cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">store</span><span class="font-label-md text-label-md text-on-surface font-semibold">Loja Matriz (Principal)</span><span class="material-symbols-outlined text-[18px] text-outline">expand_more</span></div></div><div class="flex items-center gap-space-lg"><button class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXQ5TWjsFfl4qnYOCQNRz32s7IlrTBDzbT1yPPMUMKAxO10Unb_u0ud4Mg38H7DeU3eTIF4n_9ez8TKJb8SrtwvAQ75lEG0qTmZVoOF4kRoMNYZzv8Tl67XhVWSaMAtyWGCdvxQvcuYOIs3Lzwh0haqpx5pnKfTnq79D3ycbJXet9toKIX2va5IcBs0Niub6aHZdua6h7Fl-3Rxx7SQcHvW3A6WFz-614glr0kDu84A9J3hKZcPTZ"/><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Gestor Operacional</span><span class="font-body-sm text-body-sm text-outline leading-tight">Admin Master</span></div></div></div></header><main class="relative pt-16 w-full flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full px-space-xl py-space-xl flex flex-col gap-space-xl">
+<!-- Top Context & Action Toolbar -->
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Painel de Vendas & Faturamento</span>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-emerald-50 text-emerald-700 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold">Supabase Realtime Conectado</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Visão holística das operações mercadológicas, conversões em tempo real e eficiência de cupons promocionais.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md w-full lg:w-auto">
+<!-- Time Filter Controls -->
+<div class="flex items-center bg-surface-container-low p-space-2xs rounded-lg">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest font-label-md text-label-md text-primary font-semibold shadow-sm transition-all">Hoje</button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">7 Dias</button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">Este Mês</button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-space-2xs transition-all">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+            Personalizado
+          </button>
+</div>
+<!-- Export CSV Button -->
+<button class="flex items-center gap-space-xs px-space-lg py-space-sm bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow hover:bg-primary-container transition-all" onclick="triggerExportNotice()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar Relatório CSV</span>
+</button>
+</div>
+</div>
+<!-- 4 KPI Performance Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- KPI 1: Vendas Totais -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Faturamento Bruto</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold mt-space-2xs">R$ 148.920,50</span>
+</div>
+<div class="p-space-sm bg-primary-fixed text-primary rounded-xl">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs">
+<span class="inline-flex items-center text-emerald-700 font-label-sm text-label-sm font-semibold bg-emerald-50 px-space-xs py-space-2xs rounded">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +18.4%
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs. ciclo anterior</span>
+</div>
+</div>
+<!-- KPI 2: Pedidos Realizados -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Pedidos Concluídos</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold mt-space-2xs">1.240</span>
+</div>
+<div class="p-space-sm bg-surface-container text-on-surface-variant rounded-xl">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Ticket Médio:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">R$ 120,10</span>
+</div>
+<span class="font-data-mono text-data-mono text-primary font-semibold">+92 hoje</span>
+</div>
+</div>
+<!-- KPI 3: Clientes Ativos -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Base de Clientes</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold mt-space-2xs">3.890</span>
+</div>
+<div class="p-space-sm bg-surface-container text-on-surface-variant rounded-xl">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs">
+<span class="inline-flex items-center text-emerald-700 font-label-sm text-label-sm font-semibold bg-emerald-50 px-space-xs py-space-2xs rounded">
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+            +240 novos
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">cadastrados esta semana</span>
+</div>
+</div>
+<!-- KPI 4: Descontos & Cupons -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-container/20 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Cupons Utilizados</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold mt-space-2xs">312</span>
+</div>
+<div class="p-space-sm bg-secondary-container text-on-secondary-container rounded-xl font-bold">
+<span class="material-symbols-outlined text-[24px]">confirmation_number</span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Descontos gerados:</span>
+<span class="font-label-md text-label-md font-bold text-error">R$ 6.420,00</span>
+</div>
+</div>
+</div>
+<!-- Middle Section: Sales Velocity Chart & Promotional Alerts Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Visual Sales Chart (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Velocidade de Vendas Diárias</span>
+<span class="px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container rounded font-label-sm text-label-sm font-bold">Pico Terça Flash</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Volume de receita líquida em Reais (R$) nos últimos 7 dias operacionais.</p>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span>Vendas Diretas</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
+<span>Campanha Promocional</span>
+</div>
+</div>
+</div>
+<!-- Custom Inline Vector Data Graph (No external charting library required) -->
+<div class="relative w-full h-64 flex flex-col justify-end pt-space-xl">
+<!-- Background Horizontal Grid Guides -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<!-- SVG Spline Trendline & Bar Accents -->
+<div class="w-full h-full flex items-end justify-between gap-space-md z-10 px-space-md">
+<!-- Seg -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-surface-container-high hover:bg-primary-fixed rounded-t-lg transition-all relative flex flex-col justify-end" style="height: 55%;">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap transition-opacity">R$ 18.240</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface">Seg</span>
+</div>
+<!-- Ter (Peak Day with Secondary Yellow Accent) -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-secondary-container rounded-t-lg transition-all relative flex flex-col justify-end shadow-sm" style="height: 94%;">
+<div class="absolute -top-7 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap font-bold shadow-md">
+                  R$ 38.450 🔥
+                </div>
+<div class="w-full h-1/3 bg-secondary/15 rounded-t-lg"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Ter</span>
+</div>
+<!-- Qua -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-surface-container-high hover:bg-primary-fixed rounded-t-lg transition-all relative flex flex-col justify-end" style="height: 62%;">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap transition-opacity">R$ 21.320</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface">Qua</span>
+</div>
+<!-- Qui -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-surface-container-high hover:bg-primary-fixed rounded-t-lg transition-all relative flex flex-col justify-end" style="height: 70%;">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap transition-opacity">R$ 24.890</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface">Qui</span>
+</div>
+<!-- Sex -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-primary rounded-t-lg transition-all relative flex flex-col justify-end shadow-sm" style="height: 82%;">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap transition-opacity">R$ 29.110</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface">Sex</span>
+</div>
+<!-- Sab -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-surface-container-high hover:bg-primary-fixed rounded-t-lg transition-all relative flex flex-col justify-end" style="height: 48%;">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap transition-opacity">R$ 15.600</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface">Sáb</span>
+</div>
+<!-- Dom (Hoje) -->
+<div class="flex-1 flex flex-col items-center gap-space-xs group cursor-pointer">
+<div class="w-full max-w-[48px] bg-primary-container rounded-t-lg transition-all relative flex flex-col justify-end shadow-sm" style="height: 52%;">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-xs py-space-2xs rounded font-data-mono text-data-mono whitespace-nowrap transition-opacity">R$ 17.310 (Parcial)</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Dom (Hoje)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center justify-between text-body-sm font-body-sm text-on-surface-variant bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">insights</span>
+<span>Média de faturamento diário estabelecida em <strong>R$ 21.274,35</strong>.</span>
+</div>
+<span class="text-primary font-label-md text-label-md cursor-pointer hover:underline">Ver análise aprofundada →</span>
+</div>
+</div>
+<!-- Quick Action Panel: Promoções Ativas & Alertas de Estoque (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Live Promo Card -->
+<div class="bg-gradient-to-br from-surface-container-lowest to-surface-container-low p-space-xl rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Campanha em Andamento</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-2xs">Festival Tech Week</h3>
+</div>
+<span class="px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container rounded font-label-sm text-label-sm font-extrabold animate-pulse">EXPIRA EM 03:54:12</span>
+</div>
+<div class="my-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px]">local_fire_department</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Cupom TECHFAST20</span>
+<span class="font-body-sm text-body-sm text-outline">20% OFF em Monitores e GPUs</span>
+</div>
+</div>
+<span class="font-data-mono text-data-mono font-bold text-primary">184 usos</span>
+</div>
+<button class="w-full py-space-sm bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold rounded-lg hover:brightness-95 transition-all text-center">
+            Gerenciar Parâmetros do Desconto
+          </button>
+</div>
+<!-- Inventory Alerts Box -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex-1 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Atenção ao Estoque</span>
+</div>
+<span class="font-label-sm text-label-sm text-error bg-error-container px-space-xs py-space-2xs rounded font-semibold">2 Itens Críticos</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Low Item 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<img class="w-10 h-10 rounded-lg object-cover bg-surface-container-highest shrink-0" data-alt="High performance mechanical gaming keyboard with RGB backlighting on modern dark desk setup, studio product photograph, cinematic lighting, ultra-sharp details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL5TdGvuQkkCqBCwvjIs5t_MTkKaxzffPbHJVt2_I7Eow6CSWYnBqBJzQEwtLYhlqqNN3YMcQaBCgA7jIIXHf-vpib5aa41o_1O1PAq1E4imCgEjtJa3F37BIACkKO_cZXmKKQPKpdbpkGZQlcCOcTlFGjAWlqqPE4Nk_bYbux21jCKSSqeeF-VH6lXzrXfMC491klzl85sZ7NQ3bcpT3in9nmR6dYLrucwUnoRO-6V1ryJxxqbIn1"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Teclado Mecânico RGB Pro</span>
+<span class="font-body-sm text-body-sm text-outline">SKU: CF-KBD-904</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-data-mono text-data-mono font-bold text-error block">2 un.</span>
+<span class="font-label-sm text-label-sm text-outline">Restantes</span>
+</div>
+</div>
+<!-- Low Item 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<img class="w-10 h-10 rounded-lg object-cover bg-surface-container-highest shrink-0" data-alt="Wireless ergonomic mouse with high precision optical sensor sitting on a sleek minimalist desk surface, premium commercial lighting, sharp product focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZCajdrnxn_dP_ufobMoELDVz1g2MjX0V9R_eXOO3ugWD5ObMNQnF6J7w6tN0ZFNN4xi5vtNeTNAzj-LgRRhltVjlBnSwiVyJYiCQBwFbkgmyoNZc66Hf7M47H7a43LlAhOuX8bhEyl1HJ_AffZd2seMpaqttOwlQN8ZbshD_Vo9Ydj8-pnXwMKXzICJirSEPhnzrdTDpokY5jLIgXh_LdAkfRDrQfz3BiCmarBh3Qg0VRZ3XvwZSu"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Mouse Sem Fio 16000 DPI</span>
+<span class="font-body-sm text-body-sm text-outline">SKU: CF-MOU-412</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-data-mono text-data-mono font-bold text-error block">4 un.</span>
+<span class="font-label-sm text-label-sm text-outline">Restantes</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md">
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-low hover:bg-surface-container-high rounded-lg transition-colors" data-path="produtos" href="#">
+<span>Ir para Gestão de Catálogo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Data Section: Últimas Vendas Realizadas (High Density Table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header & Filter Row -->
+<div class="p-space-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Últimas Vendas Realizadas</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Monitoramento instantâneo de transações monetárias e faturamento por cliente.</p>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Filtrar pedidos..." type="text"/>
+</div>
+<select class="h-9 px-space-md bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg focus:outline-none cursor-pointer">
+<option>Todos os Status</option>
+<option>Pago / Aprovado</option>
+<option>Aguardando Pagamento</option>
+<option>Cancelado</option>
+</select>
+</div>
+</div>
+<!-- Scrollable Data Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="py-space-md px-space-xl">ID Pedido</th>
+<th class="py-space-md px-space-lg">Data & Hora</th>
+<th class="py-space-md px-space-lg">Cliente</th>
+<th class="py-space-md px-space-lg">Itens Adquiridos</th>
+<th class="py-space-md px-space-lg">Cupom</th>
+<th class="py-space-md px-space-lg">Valor Total</th>
+<th class="py-space-md px-space-lg">Pagamento</th>
+<th class="py-space-md px-space-lg">Status</th>
+<th class="py-space-md px-space-xl text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-xl font-data-mono text-data-mono font-bold text-primary">#CF-9821</td>
+<td class="py-space-md px-space-lg whitespace-nowrap">
+<span class="block font-label-md text-label-md font-medium text-on-surface">14:42:10</span>
+<span class="block font-body-sm text-body-sm text-outline">Hoje, 27 Out</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[12px] shrink-0">
+                    MS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Marcos Silva</span>
+<span class="font-body-sm text-body-sm text-outline truncate">marcos.silva@email.com</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-2xs">
+<img class="w-7 h-7 rounded object-cover bg-surface-container-high" data-alt="High performance curved ultra wide gaming monitor on black stand, cinematic product rendering, dark tech studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Q6JLp1urYb5DGDqhNMU5ZQysGwt5a9BPIYqn2ztdpFkllEQt4VnWxsMI5R6AJuJ9HW76VJYQVvEPoeY8DahZTzehhoSb5eRP8a9Lu5kBc8hYZHCJM686Jym6wzh8jzIGpB2Yx786-0-EHgnO85EnTHzb_kt8U7TbGCqRuu2C779n8ca1Q4HpeSeQ2Xs-Om1Y-sqGXyfJXRg-svY54ychKBZAFH_kN4oz4aclnl-iA32-Pue5Y0F0"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold ml-space-xs">+2 itens</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="px-space-xs py-space-2xs bg-secondary-container/40 text-on-secondary-fixed font-data-mono text-data-mono font-semibold rounded">
+                  COMPRAFAST10
+                </span>
+</td>
+<td class="py-space-md px-space-lg font-data-mono text-data-mono font-bold text-on-surface">
+                R$ 2.450,90
+              </td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">qr_code_2</span>
+<span>PIX Instantâneo</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs bg-emerald-50 text-emerald-700 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Aprovado
+                </span>
+</td>
+<td class="py-space-md px-space-xl text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Detalhes do Pedido">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Ficha do Cliente">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group bg-surface-bright">
+<td class="py-space-md px-space-xl font-data-mono text-data-mono font-bold text-primary">#CF-9820</td>
+<td class="py-space-md px-space-lg whitespace-nowrap">
+<span class="block font-label-md text-label-md font-medium text-on-surface">14:15:02</span>
+<span class="block font-body-sm text-body-sm text-outline">Hoje, 27 Out</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-[12px] shrink-0">
+                    AL
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Ana Luísa Ramos</span>
+<span class="font-body-sm text-body-sm text-outline truncate">aluisa.ramos@techcorp.io</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-2xs">
+<img class="w-7 h-7 rounded object-cover bg-surface-container-high" data-alt="High-end noise canceling studio wireless headphones in matte graphite, luxury product photography, soft diffused studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyPnEwkDfD4vO0kkX-vdnnW50ZZQPf7dqbWfku6QnpX5EBOTWdrFHZh-vbJEjxj0cpCLBRsj4hsiD1s75adrA6XNh0c6Lwh6Dx9W-Yf7hESTKTMtbNmRtYqFM9iinJJQmY2Tsu_reB73GBxG7zIvgKMoZaE180UQEd01HCxOJcPtNPCnTzK81xVMPcZtFyD6fNxGdkPAgVCge1gGI_iUwdiRr6Qc6siLh9dzPYkMI6hfvmj_Wh6xq3"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold ml-space-xs">1 item</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="text-outline font-data-mono text-data-mono">-</span>
+</td>
+<td class="py-space-md px-space-lg font-data-mono text-data-mono font-bold text-on-surface">
+                R$ 899,00
+              </td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">credit_card</span>
+<span>Cartão (10x)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs bg-emerald-50 text-emerald-700 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Aprovado
+                </span>
+</td>
+<td class="py-space-md px-space-xl text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Detalhes do Pedido">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Ficha do Cliente">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-xl font-data-mono text-data-mono font-bold text-primary">#CF-9819</td>
+<td class="py-space-md px-space-lg whitespace-nowrap">
+<span class="block font-label-md text-label-md font-medium text-on-surface">13:58:33</span>
+<span class="block font-body-sm text-body-sm text-outline">Hoje, 27 Out</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold text-[12px] shrink-0">
+                    RF
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Rodrigo Ferreira</span>
+<span class="font-body-sm text-body-sm text-outline truncate">r.ferreira@devops.net</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-2xs">
+<img class="w-7 h-7 rounded object-cover bg-surface-container-high" data-alt="High precision gaming mouse sensor peripheral on minimalist desk mat, top down angle product shot, premium hardware render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwMn0d6ac3fYOOKSBAYgFQHmPSRfYi7DmRT3Oq_HR4XH5irQ_gaTf_p51RvknBRh9hAsK33zEcG_MNcgMh_6gG0BucKHKlvP7aZm6X_4yjW3e1Pj1mkxee85KHbOZCwTwtrnhphM1r-Q2P5YSpL2Vi3K4GRh7J0990BeFgLPO8WMAb59drU0qX5P628ezT0JJFnXW4Thx06-RNvBb-Ejq5A-xyIWDkP_SIAwCWVcq9xot_RE0XTYTC"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold ml-space-xs">1 item</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="px-space-xs py-space-2xs bg-secondary-container/40 text-on-secondary-fixed font-data-mono text-data-mono font-semibold rounded">
+                  TECHFAST20
+                </span>
+</td>
+<td class="py-space-md px-space-lg font-data-mono text-data-mono font-bold text-on-surface">
+                R$ 380,00
+              </td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-outline">receipt_long</span>
+<span>Boleto Bancário</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs bg-amber-50 text-amber-700 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Aguardando
+                </span>
+</td>
+<td class="py-space-md px-space-xl text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Detalhes do Pedido">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Ficha do Cliente">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group bg-surface-bright">
+<td class="py-space-md px-space-xl font-data-mono text-data-mono font-bold text-primary">#CF-9818</td>
+<td class="py-space-md px-space-lg whitespace-nowrap">
+<span class="block font-label-md text-label-md font-medium text-on-surface">12:30:18</span>
+<span class="block font-body-sm text-body-sm text-outline">Hoje, 27 Out</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-[12px] shrink-0">
+                    CP
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Camila Prado</span>
+<span class="font-body-sm text-body-sm text-outline truncate">camila.prado@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-2xs">
+<img class="w-7 h-7 rounded object-cover bg-surface-container-high" data-alt="Compact mechanical numeric keypad and custom artisan keycaps set, high end studio close-up photograph, sharp crisp textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXV_1zn0klJvVzbeg9ZZGguWl3EeAQpLkjULwWZag3CqcV-v21G-dAPUwHlSiwEUmI3o_lWkoJbDhSXtSsi9FiOky6c7J6Cfun2y9A3l4XORPZ2BiQrQR2M9MXAlpc6bskd8Me2knkVb1iRpRdnuO4oSmQ5MWhdEjNcrhRrXiK8qykR-GBEKSQdhbrBNHI4s2U63DnzTVDBFMZT2ZEuAZ77R9hdsTarAdt1hbwp0SZdtHUnfF_kU6U"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold ml-space-xs">+3 itens</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="text-outline font-data-mono text-data-mono">-</span>
+</td>
+<td class="py-space-md px-space-lg font-data-mono text-data-mono font-bold text-on-surface">
+                R$ 540,20
+              </td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">qr_code_2</span>
+<span>PIX Instantâneo</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs bg-emerald-50 text-emerald-700 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Aprovado
+                </span>
+</td>
+<td class="py-space-md px-space-xl text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Detalhes do Pedido">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Ficha do Cliente">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 (Cancelado) -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-xl font-data-mono text-data-mono font-bold text-outline">#CF-9817</td>
+<td class="py-space-md px-space-lg whitespace-nowrap">
+<span class="block font-label-md text-label-md font-medium text-on-surface">11:12:45</span>
+<span class="block font-body-sm text-body-sm text-outline">Hoje, 27 Out</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-bold text-[12px] shrink-0">
+                    TG
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Thiago Gusmão</span>
+<span class="font-body-sm text-body-sm text-outline truncate">thiago.g@outlook.com</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-2xs">
+<img class="w-7 h-7 rounded object-cover bg-surface-container-high" data-alt="Desktop computer internal graphics card GPU component with glowing fans, sleek tech product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRIvBYgqH4tIbrf3r1E43UhT9SATGOh5kr5LOyrFON0PAorZd033fcXEYek01nxlchOyo4AahlrvCeIF2BSMTimlt7aVqiLN4jVsNqnUsOHk-eVgHy_WcH7hpD90gKQAYI9HSlXQRgnL4lrsDzwulZbq89IkOhUFgNPCxM5LgJBg5FQCG3pJMXnbY4UVkU_VeMkwTTZyYf254JFrtn5EukvGbYpT043gobEvCa3wcDcsiluh-sh660"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold ml-space-xs">1 item</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="text-outline font-data-mono text-data-mono">-</span>
+</td>
+<td class="py-space-md px-space-lg font-data-mono text-data-mono font-bold text-outline line-through">
+                R$ 4.299,00
+              </td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-error">credit_card_off</span>
+<span>Cartão Recusado</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs bg-error-container text-on-error-container rounded-full font-label-sm text-label-sm font-semibold">
+                  Cancelado
+                </span>
+</td>
+<td class="py-space-md px-space-xl text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Detalhes do Pedido">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Ver Ficha do Cliente">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Exibindo <strong>5</strong> de <strong>1.240</strong> pedidos concluídos nesta janela.
+        </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded bg-surface-container-lowest text-outline font-label-md text-label-md cursor-not-allowed">Anterior</button>
+<button class="px-space-md py-space-xs rounded bg-primary text-on-primary font-label-md text-label-md font-semibold">1</button>
+<button class="px-space-md py-space-xs rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md">2</button>
+<button class="px-space-md py-space-xs rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md">3</button>
+<span class="px-space-xs text-outline">...</span>
+<button class="px-space-md py-space-xs rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md">Próximo</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function triggerExportNotice() {
+    const originalText = event.currentTarget.innerHTML;
+    const btn = event.currentTarget;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Gerando CSV...</span>';
+    btn.classList.add('opacity-80', 'pointer-events-none');
+    
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Download Iniciado!</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('opacity-80', 'pointer-events-none');
+      }, 2000);
+    }, 1200);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-sm px-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full flex items-center justify-between font-body-sm text-body-sm text-outline"><div class="flex items-center gap-space-md"><span>CompFast Engine v2.4</span><span>•</span><span>Supabase Client JS v2.39</span><span>•</span><span class="text-emerald-700 font-label-sm text-label-sm font-semibold">SSL Conexão Criptografada</span></div><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Documentação API</a><a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Exportar Relatórios</a><a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Status dos Servidores</a></div></div></footer></div></body></html>

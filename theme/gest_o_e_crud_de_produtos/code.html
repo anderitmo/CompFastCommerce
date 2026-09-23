@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#adc6ff","primary-fixed-dim":"#adc6ff","error":"#ba1a1a","on-error":"#ffffff","tertiary-fixed":"#dae2fd","surface-bright":"#f8f9ff","on-primary-container":"#fefcff","on-tertiary":"#ffffff","on-tertiary-container":"#fefcff","on-secondary-container":"#6f6300","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","on-secondary-fixed":"#201c00","on-surface-variant":"#414754","inverse-on-surface":"#eaf1ff","on-secondary-fixed-variant":"#504700","secondary-fixed":"#fde400","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","primary-fixed":"#d8e2ff","outline-variant":"#c1c6d6","tertiary-container":"#6c748b","on-tertiary-fixed-variant":"#3f465c","surface-container":"#e5eeff","primary":"#0058bb","on-primary-fixed-variant":"#004493","on-tertiary-fixed":"#131b2e","error-container":"#ffdad6","outline":"#727785","tertiary":"#545c72","background":"#f8f9ff","primary-container":"#1171e7","secondary-container":"#fae100","secondary-fixed-dim":"#dec800","on-error-container":"#93000a","surface":"#f8f9ff","surface-variant":"#d3e4fe","on-background":"#0b1c30","surface-tint":"#005bc0","on-surface":"#0b1c30","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#bec6e0","secondary":"#6a5f00","on-primary-fixed":"#001a41","on-secondary":"#ffffff","on-primary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-desktop":"2rem","space-3xl":"3rem","margin":"1rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","space-md":"0.75rem","space-lg":"1rem","space-2xs":"0.125rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-2xl":"2rem"},fontFamily:{"body-lg":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"label-md":["Inter"],"data-mono":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"]},fontSize:{"body-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"label-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"600"}],"body-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"400"}],"headline-lg-mobile":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"headline-xl":["2rem",{lineHeight:"2.5rem",fontWeight:"700"}],"headline-xl-mobile":["1.5rem",{lineHeight:"2rem",fontWeight:"700"}],"label-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"600"}],"data-mono":["0.8125rem",{lineHeight:"1rem",fontWeight:"500"}],"headline-md":["1.125rem",{lineHeight:"1.5rem",fontWeight:"600"}],"headline-lg":["1.5rem",{lineHeight:"2rem",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest/60"><img alt="CompFast Admin Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W-7A6YSJhhixi6vcYpi1ngPVt3LqIO6guIOtaXH_ixrBo8-EWm014uv60XIfJnL4BRmfx5iCCeZCrwooI5388BNhteTxnfI4Li3vfo8rAqcNmGL4l2MtgNYIq6MMq7OuB-8Azjj1UXA0Q8UGi_PGMxxqgtDovO81wcExyUk8LFGYNie0MwtRkPPLp-QiFiO0AqyKZ84Q_-RAcmrSWsPKw5ygTzgnq2BsiXMnJi-VptSDe1JbdyvnGS2mM"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-tight font-bold tracking-tight">CompFast</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Backoffice</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Visão Geral</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-vendas" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Dashboard & Vendas</span></a></nav></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Catálogo</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="produtos" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Produtos & Estoque</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="categorias" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Categorias</span></a></nav></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Marketing & Vendas</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cupons-de-desconto" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span>Cupons de Desconto</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="promocoes" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promoções</span></a></nav></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Administração</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="clientes-cadastrados" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Clientes Cadastrados</span></a></nav></div></div><div class="p-space-md m-space-md bg-surface-container rounded-xl flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Supabase Cloud</span></div><div class="font-data-mono text-data-mono text-outline truncate">compfast-db.supabase.co</div><div class="flex items-center justify-between mt-space-2xs"><span class="font-label-sm text-label-sm text-on-surface-variant">PostgreSQL 15</span><span class="px-space-xs py-space-2xs bg-emerald-100 text-emerald-800 rounded font-label-sm text-label-sm font-semibold">Ativo</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Buscar pedidos, produtos, códigos SKU ou clientes..." type="text"/></div><div class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low rounded-lg shrink-0 cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">store</span><span class="font-label-md text-label-md text-on-surface font-semibold">Loja Matriz (Principal)</span><span class="material-symbols-outlined text-[18px] text-outline">expand_more</span></div></div><div class="flex items-center gap-space-lg"><button class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXQ5TWjsFfl4qnYOCQNRz32s7IlrTBDzbT1yPPMUMKAxO10Unb_u0ud4Mg38H7DeU3eTIF4n_9ez8TKJb8SrtwvAQ75lEG0qTmZVoOF4kRoMNYZzv8Tl67XhVWSaMAtyWGCdvxQvcuYOIs3Lzwh0haqpx5pnKfTnq79D3ycbJXet9toKIX2va5IcBs0Niub6aHZdua6h7Fl-3Rxx7SQcHvW3A6WFz-614glr0kDu84A9J3hKZcPTZ"/><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Gestor Operacional</span><span class="font-body-sm text-body-sm text-outline leading-tight">Admin Master</span></div></div></div></header><main class="relative pt-16 w-full flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="px-margin-desktop py-space-xl flex flex-col gap-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-space-2xs bg-primary-fixed text-on-primary-fixed rounded font-label-sm text-label-sm font-semibold tracking-wider uppercase">Storage Sync: Ativo</span>
+<span class="font-data-mono text-data-mono text-outline">bucket: public/products-media</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Catálogo de Produtos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Gerenciamento dinâmico de inventário, tabelas de preços e ativos de mídia conectados ao Supabase.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-lg py-space-sm rounded-lg shadow-sm">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-none">84</span>
+<span class="font-label-sm text-label-sm text-outline">Ativos</span>
+</div>
+<div class="h-8 w-px bg-surface-container-high"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-error leading-none">12</span>
+<span class="font-label-sm text-label-sm text-outline">Sem Estoque</span>
+</div>
+<div class="h-8 w-px bg-surface-container-high"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-tertiary leading-none">6</span>
+<span class="font-label-sm text-label-sm text-outline">Rascunhos</span>
+</div>
+</div>
+<button class="flex items-center gap-space-sm px-space-xl h-10 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-all" onclick="toggleDrawer(true)">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Novo Produto (Supabase)</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row gap-space-md items-center justify-between">
+<div class="flex flex-1 items-center gap-space-md w-full">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Filtrar por SKU, Código de Barras ou Nome..." type="text"/>
+</div>
+<div class="relative">
+<select class="h-9 px-space-md bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg appearance-none pr-8 cursor-pointer focus:outline-none">
+<option>Todas as Categorias</option>
+<option>Smartphones</option>
+<option>Informática</option>
+<option>Periféricos</option>
+<option selected="">Áudio & Vídeo</option>
+<option>Acessórios</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+<div class="relative">
+<select class="h-9 px-space-md bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg appearance-none pr-8 cursor-pointer focus:outline-none">
+<option>Todos os Status</option>
+<option selected="">Ativo na Loja</option>
+<option>Sem Estoque</option>
+<option>Promoção Vigente</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<span class="font-label-sm text-label-sm text-outline hidden xl:inline">Ordenar:</span>
+<button class="h-9 px-space-md bg-surface-container-low hover:bg-surface-container-high rounded-lg text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-xs transition-colors">
+<span>Menor Estoque</span>
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface-variant rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg w-12 text-center">
+<input class="w-4 h-4 rounded bg-surface-container-lowest cursor-pointer text-primary focus:ring-0" type="checkbox"/>
+</th>
+<th class="py-space-md px-space-md">Produto & Imagem</th>
+<th class="py-space-md px-space-md">SKU</th>
+<th class="py-space-md px-space-md">Categoria</th>
+<th class="py-space-md px-space-md">Preço Venda</th>
+<th class="py-space-md px-space-md">Nível de Estoque</th>
+<th class="py-space-md px-space-md">Status</th>
+<th class="py-space-md px-space-lg text-right">Ações Rápidas</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-md px-space-lg text-center">
+<input class="w-4 h-4 rounded cursor-pointer text-primary focus:ring-0" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="High quality close up product photograph of a modern gaming headset black and cyan blue RGB lighting on isolated clean studio background sharp focus ecommerce style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIVG7VEOYwOpSjvTQfCKEV9r3B60vDq0Wku3LoaUOV10YeXwri6-mjA9ZYg73Dt1f2I07YfFYLkwly6K-oAXg3JXh2fi_dPHQg1az41VC9Q1EuGi5NsV7BiI7mpm3monaY_NiXmzOvQrYA24HVjpQdwGUEmWIUtlKxI849dHFLQ64nIG4-CnZckFkJJQH08W_5Fx_391SXSkjvOW6-MDqM0Iu1cysF7kp2-oB0_iPVsvErEaAvmFOU"/>
+<span class="absolute bottom-0 right-0 px-1 bg-surface-container-lowest/90 font-data-mono text-[9px] text-primary font-bold">4 imgs</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Headset Gamer CompFast HyperBeat 7.1</span>
+<span class="font-data-mono text-data-mono text-outline">storage: hyperbeat-hero.webp</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">CF-AUD-092</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-2xs bg-tertiary-fixed text-on-tertiary-fixed rounded font-label-sm text-label-sm font-semibold">Áudio</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface">R$ 299,00</span>
+<span class="px-space-2xs py-0 bg-secondary-container text-on-secondary-container rounded font-label-sm text-[10px] font-bold">-23%</span>
+</div>
+<span class="line-through font-body-sm text-body-sm text-outline">R$ 389,90</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-space-2xs w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">45 un.</span>
+<span class="text-outline">Normal</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-space-2xs rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                  Vitrine Ativa
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-primary rounded transition-colors" onclick="toggleDrawer(true)" title="Editar no Modal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Duplicar Produto">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-secondary rounded transition-colors" title="Configurar Promoção">
+<span class="material-symbols-outlined text-[18px]">local_offer</span>
+</button>
+<button class="p-space-xs hover:bg-error-container text-outline hover:text-error rounded transition-colors" title="Remover Produto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-md px-space-lg text-center">
+<input class="w-4 h-4 rounded cursor-pointer text-primary focus:ring-0" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Mechanical custom gaming keyboard with bright tactile keycaps premium aluminum body dynamic RGB lighting desktop angle shot photorealistic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRzTFId2TEx2xCiJAgywf0Qa4sPAbtj1WeBC7ULEAv81oeocFCPHrwp-iH9dFYY7DdYwNIu3lea7BIQiSdGEU_qEsLUuQou-tWOjXNHJp-ef8emSEmWIDWaZVeuq56I0EpFOg6l5a_zSqeQHrJu52ocpFzfTiw4Z_nREXmAqAurQLSGcf_-_gJ-EWxQLQj4SGAPjWUmu6iaieSiRCyKzi7rdpe6Wfds8T1bUgvpel1TSzDtXeADdEJ"/>
+<span class="absolute bottom-0 right-0 px-1 bg-surface-container-lowest/90 font-data-mono text-[9px] text-primary font-bold">2 imgs</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Teclado Mecânico Falcon RGB Switch Brown</span>
+<span class="font-data-mono text-data-mono text-outline">storage: kb-falcon-brown.webp</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">CF-PER-118</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-2xs bg-primary-fixed text-on-primary-fixed rounded font-label-sm text-label-sm font-semibold">Periféricos</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">R$ 449,90</span>
+<span class="font-body-sm text-body-sm text-outline">Sem desconto</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-space-2xs w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error font-bold">0 un.</span>
+<span class="text-error font-semibold">Esgotado</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-space-2xs rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                  Alerta Reposição
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-primary rounded transition-colors" onclick="toggleDrawer(true)" title="Editar no Modal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Duplicar Produto">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-secondary rounded transition-colors" title="Configurar Promoção">
+<span class="material-symbols-outlined text-[18px]">local_offer</span>
+</button>
+<button class="p-space-xs hover:bg-error-container text-outline hover:text-error rounded transition-colors" title="Remover Produto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-md px-space-lg text-center">
+<input class="w-4 h-4 rounded cursor-pointer text-primary focus:ring-0" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="High tech gaming mouse wireless ultra-lightweight sleek matte black texture placed beside braided cable on minimalist surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCykioxZeI9AD047pN2XDisVc5XM4aU0ne5d_8gKm3SmKcLteZ8kXrDam_UwSKV82WZyMfGO1PO99Cy3KDNA_ZV9txdg_0TthxzYy48X6u6qkcL4qbf-rdes6Tt6w6QKUGaoBY-djrTQ5k9RnzhCMLYDUyDsu1sHy6d2qBY1DvOwPEBb0a0aEUVnUJNqJeF-5WrEbXX1FfpHWAZOhr_AUdMZm1U70Zl-BlhTdhxgr0KdnCpo5vcMKXD"/>
+<span class="absolute bottom-0 right-0 px-1 bg-surface-container-lowest/90 font-data-mono text-[9px] text-primary font-bold">1 img</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Mouse Ultraleve CompFast Swift 24K DPI</span>
+<span class="font-data-mono text-data-mono text-outline">storage: mouse-swift-front.webp</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">CF-PER-204</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-2xs bg-primary-fixed text-on-primary-fixed rounded font-label-sm text-label-sm font-semibold">Periféricos</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface">R$ 189,90</span>
+<span class="px-space-2xs py-0 bg-secondary-container text-on-secondary-container rounded font-label-sm text-[10px] font-bold">-15%</span>
+</div>
+<span class="line-through font-body-sm text-body-sm text-outline">R$ 220,00</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-space-2xs w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">12 un.</span>
+<span class="text-secondary font-semibold">Baixo</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-space-2xs rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Vitrine Ativa
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-primary rounded transition-colors" onclick="toggleDrawer(true)" title="Editar no Modal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Duplicar Produto">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-secondary rounded transition-colors" title="Configurar Promoção">
+<span class="material-symbols-outlined text-[18px]">local_offer</span>
+</button>
+<button class="p-space-xs hover:bg-error-container text-outline hover:text-error rounded transition-colors" title="Remover Produto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-md px-space-lg text-center">
+<input class="w-4 h-4 rounded cursor-pointer text-primary focus:ring-0" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Modern smartphone flagship display with vibrant wallpaper on metallic edge studio lighting clean technological aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcTvPUKp26u8UqW9jXkg3uvC55QRuXnhpiXG2t1e4QC3okbX80wGqRKF1NuTnInUql8XuNz6Rz-tPeRMw25eGx7X7w20StWnOI5d0UOKuL138ZdWG0NverkEEdjooBPmtzEydzKbdRHTwkmrjAKPghuwQC8ozTKQgWN1s-tSGUBMqgO1g_9MhLpNkTRfOR4FOTy9firVfwuC58-qapsL9kiy_3Ah0viNWWJwFBOus265t8SWlbamf0"/>
+<span class="absolute bottom-0 right-0 px-1 bg-surface-container-lowest/90 font-data-mono text-[9px] text-primary font-bold">5 imgs</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Smartphone Z-Prime 256GB 5G Graphite</span>
+<span class="font-data-mono text-data-mono text-outline">storage: zprime-graphite.webp</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">CF-SMP-044</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-2xs bg-secondary-fixed text-on-secondary-fixed rounded font-label-sm text-label-sm font-semibold">Smartphones</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">R$ 3.899,00</span>
+<span class="font-body-sm text-body-sm text-outline">Tabela Normal</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-space-2xs w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">88 un.</span>
+<span class="text-outline">Amplo</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                  Rascunho
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-primary rounded transition-colors" onclick="toggleDrawer(true)" title="Editar no Modal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Duplicar Produto">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container text-on-surface-variant hover:text-secondary rounded transition-colors" title="Configurar Promoção">
+<span class="material-symbols-outlined text-[18px]">local_offer</span>
+</button>
+<button class="p-space-xs hover:bg-error-container text-outline hover:text-error rounded transition-colors" title="Remover Produto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="font-body-sm text-body-sm text-outline">
+          Mostrando <span class="font-semibold text-on-surface">1-4</span> de <span class="font-semibold text-on-surface">102</span> produtos registrados no banco
+        </div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-outline rounded font-label-sm text-label-sm shadow-sm cursor-not-allowed">Anterior</button>
+<button class="px-space-md py-space-xs bg-primary text-on-primary rounded font-label-sm text-label-sm shadow-sm font-bold">1</button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded font-label-sm text-label-sm shadow-sm transition-colors">2</button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded font-label-sm text-label-sm shadow-sm transition-colors">3</button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded font-label-sm text-label-sm shadow-sm transition-colors">Próxima</button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex justify-end bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300" id="productModalDrawer">
+<div class="w-full max-w-2xl bg-surface-container-lowest h-full shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-right duration-300">
+<div class="h-16 px-space-xl bg-surface-container-lowest flex items-center justify-between shadow-sm shrink-0">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">inventory</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">Cadastrar / Editar Produto</h2>
+<span class="font-data-mono text-data-mono text-outline">Tabela: public.products | Storage Bucket: products-media</span>
+</div>
+</div>
+<button class="p-space-sm text-outline hover:text-on-surface rounded-lg hover:bg-surface-container-high transition-colors" onclick="toggleDrawer(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-space-xl flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">1. Dados Fundamentais</span>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Nome do Produto</label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" type="text" value="Headset Gamer CompFast HyperBeat 7.1"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Código SKU</label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-low font-data-mono text-data-mono font-medium text-on-surface focus:bg-surface-container-lowest shadow-sm" type="text" value="CF-AUD-092"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Categoria</label>
+<div class="relative">
+<select class="w-full h-10 px-space-md bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg appearance-none cursor-pointer focus:bg-surface-container-lowest shadow-sm">
+<option>Informática</option>
+<option selected="">Áudio & Acústica</option>
+<option>Periféricos Gamers</option>
+<option>Smartphones</option>
+<option>Acessórios & Cabos</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">2. Precificação & Estoque</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Preço Original</label>
+<div class="relative">
+<span class="absolute left-space-md top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">R$</span>
+<input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest shadow-sm" type="text" value="389,90"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Preço Promocional</label>
+<div class="relative">
+<span class="absolute left-space-md top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-primary">R$</span>
+<input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-low font-bold text-primary font-body-md text-body-md focus:bg-surface-container-lowest shadow-sm" type="text" value="299,00"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Quantidade Estoque</label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest shadow-sm" type="number" value="45"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">3. Supabase Storage (products-media/)</span>
+<span class="font-data-mono text-data-mono text-primary font-medium">3 arquivos anexados</span>
+</div>
+<div class="p-space-xl bg-surface-container-low rounded-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold mt-space-sm">Arraste fotos aqui ou clique para selecionar</span>
+<span class="font-body-sm text-body-sm text-outline mt-space-2xs">Suporta WebP, PNG e JPEG de até 8MB por arquivo</span>
+</div>
+<div class="grid grid-cols-3 gap-space-md mt-space-xs">
+<div class="relative group rounded-lg overflow-hidden bg-surface-container-high shadow-sm aspect-square">
+<img class="w-full h-full object-cover" data-alt="Headset gaming perspective frontal view crisp details isolated white clean render ecommerce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAemMyOt7dkqIGA-TcF0gv-RXpf0hR83HwZMCUsGAh5JWFWH8niVJip5ECT7VBjYMJogqX32Jl7HlAKVkW7Nx3pCUai5qlPV7gvcOT98hsYzxV_CwLVpp5pnSTEJesOdJWdQ89-2iEYk2naj1wfP7I9rT_2jexPvdWcFsKz61PsP3nBd4NfoDc5EDgjs54h-7UUXbU2tB_eNxlek5zc_369VZ1YV7DLmxNcMhoEMBzUW8Kmv6qqSNib"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-between p-space-xs">
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold rounded">Principal</span>
+<button class="w-6 h-6 rounded-full bg-error text-on-error flex items-center justify-center shadow hover:opacity-90">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<span class="font-data-mono text-[10px] text-surface-container-lowest truncate">hyperbeat-hero.webp</span>
+</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden bg-surface-container-high shadow-sm aspect-square">
+<img class="w-full h-full object-cover" data-alt="Gaming headset side profile macro angle dynamic lighting showing earcups and audio controls clean product shoot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvgjC6iHlBtu5DE4VgtS3TWUYb4oA5MrXb02KSgaZqgCmCYkqyu0nuWvw4GWm8TKLTw2MqddCX51jYPbKDu8KGPTeSWX24cxqL-BL7E-Eb5FOh-FfCZ9qjHDLg-vaRvG8H5WBmnyGC8LgCYkB7MRWp7o8jooStxqLbQ64L2We0fEX9lbMtSHCEg4f4rckYSBbBVpGaEMIPQQhnTIgeJeBUbJiwnFQDH95NwSvfccvRZS-zAqOI8S7e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-between p-space-xs opacity-90 group-hover:opacity-100">
+<div class="flex justify-end items-center">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-error flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+<span class="font-data-mono text-[10px] text-surface-container-lowest truncate">hyperbeat-side.webp</span>
+</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden bg-surface-container-high shadow-sm aspect-square">
+<img class="w-full h-full object-cover" data-alt="Gaming headset accessories microphone detachable cable audio connectors studio layout shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANSdXx0XESgE4FOeaVnAbOJXf2tHREFfOToxGChro4CXSgfNVZnxrS6kHZcdLHUOAWT6VjCO8749rtTruKR1H7NnFl9Ir7Wa9N_JmYAVXErsWbDaaAnNHoYWy6R-kocFqejIqMeWD1B0HSq5aT-35BVYqLcMS8pRnbzL40sIGFcLvL8GMQqdS1Yw2HEerPFOQoKHztBJ6Y_skWHn48V9G1q4PVzmdQbv26_i8W9K6-yFbvyQPuWGsz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-between p-space-xs opacity-90 group-hover:opacity-100">
+<div class="flex justify-end items-center">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-error flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+</div>
+<span class="font-data-mono text-[10px] text-surface-container-lowest truncate">hyperbeat-acc.webp</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">4. Publicação & Visibilidade</span>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Produto em Destaque na Vitrine</span>
+<span class="font-body-sm text-body-sm text-outline">Exibe no carrossel de topo e banners dinâmicos da home</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="h-px bg-surface-container-high"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Visível na Loja SPA</span>
+<span class="font-body-sm text-body-sm text-outline">Aparece nas buscas e filtros públicos de clientes</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="h-16 px-space-xl bg-surface-container-lowest shadow-[0_-4px_12px_rgba(0,0,0,0.03)] flex items-center justify-between shrink-0">
+<button class="h-10 px-space-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg font-label-md text-label-md transition-colors" onclick="toggleDrawer(false)">
+          Cancelar
+        </button>
+<button class="h-10 px-space-xl bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md shadow-sm flex items-center gap-space-xs transition-colors" onclick="handleSave()">
+<span class="material-symbols-outlined text-[18px]">cloud_done</span>
+<span>Salvar no Supabase</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    function toggleDrawer(show) {
+      const drawer = document.getElementById('productModalDrawer');
+      if (show) {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+      } else {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+      }
+    }
+
+    function handleSave() {
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Sincronizando...</span>`;
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check</span><span>Atualizado!</span>`;
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+          toggleDrawer(false);
+        }, 800);
+      }, 900);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-sm px-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full flex items-center justify-between font-body-sm text-body-sm text-outline"><div class="flex items-center gap-space-md"><span>CompFast Engine v2.4</span><span>•</span><span>Supabase Client JS v2.39</span><span>•</span><span class="text-emerald-700 font-label-sm text-label-sm font-semibold">SSL Conexão Criptografada</span></div><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Documentação API</a><a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Exportar Relatórios</a><a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Status dos Servidores</a></div></div></footer></div></body></html>

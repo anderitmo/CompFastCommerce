@@ -4,12 +4,26 @@
  * Supabase REST API Integration
  */
 
+function decryptSecretKey(encodedStr, passKey) {
+  const binaryStr = atob(encodedStr);
+  let decrypted = '';
+  for (let i = 0; i < binaryStr.length; i++) {
+    const charCode = binaryStr.charCodeAt(i) ^ passKey.charCodeAt(i % passKey.length);
+    decrypted += String.fromCharCode(charCode);
+  }
+  return decrypted;
+}
+
+const _SEC_DATA = 'MA0yAyMCARE3MEAsDRtQCBsqVxsLEABJIQEtfnd4BCQwPUEyLl5FMC4=';
+const _SEC_PASS = 'CompFastCommerceSecurityKey2026';
+const _SUPABASE_KEY = decryptSecretKey(_SEC_DATA, _SEC_PASS);
+
 const SUPABASE_CONFIG = {
   endpoint: 'https://firanjbwcodewkaalkwc.supabase.co/rest/v1/',
-  apiKey: 'sb_publishable_QYT5hmIwpLglUaQlUEW_Lg_JXKln1oc',
+  apiKey: _SUPABASE_KEY,
   headers: {
-    'apikey': 'sb_publishable_QYT5hmIwpLglUaQlUEW_Lg_JXKln1oc',
-    'Authorization': 'Bearer sb_publishable_QYT5hmIwpLglUaQlUEW_Lg_JXKln1oc',
+    'apikey': _SUPABASE_KEY,
+    'Authorization': `Bearer ${_SUPABASE_KEY}`,
     'Content-Type': 'application/json',
     'Prefer': 'return=representation'
   }
@@ -98,18 +112,18 @@ function formatDate(isoString) {
   if (!isoString) return '-';
   const date = new Date(isoString);
   return date.toLocaleDateString('pt-BR', {
-    day: '2-2-digit',
-    month: '2-2-digit',
+    day: '2-digit',
+    month: '2-digit',
     year: 'numeric',
-    hour: '2-2-digit',
-    minute: '2-2-digit'
+    hour: '2-digit',
+    minute: '2-digit'
   });
 }
 
 function formatDateShort(isoString) {
   if (!isoString) return '-';
   const date = new Date(isoString);
-  return date.toLocaleDateString('pt-BR', { day: '2-2-digit', month: '2-2-digit', year: 'numeric' });
+  return date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 // Toast Notifications
@@ -1666,6 +1680,28 @@ function renderCustomersView() {
   `;
 }
 
+function formatCPF(value) {
+  if (!value) return '';
+  const digits = value.replace(/\D/g, '').slice(0, 11);
+  return digits
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+}
+
+function formatPhone(value) {
+  if (!value) return '';
+  const digits = value.replace(/\D/g, '').slice(0, 11);
+  if (digits.length <= 10) {
+    return digits
+      .replace(/(\d{2})(\d)/, '($1) $2')
+      .replace(/(\d{4})(\d)/, '$1-$2');
+  }
+  return digits
+    .replace(/(\d{2})(\d)/, '($1) $2')
+    .replace(/(\d{5})(\d)/, '$1-$2');
+}
+
 function openCustomerModal(customerId = null) {
   const cust = customerId ? state.customers.find(c => c.id === customerId) : null;
 
@@ -1691,13 +1727,13 @@ function openCustomerModal(customerId = null) {
           </div>
           <div class="flex flex-col gap-1">
             <label class="text-xs font-bold text-outline uppercase tracking-wider">CPF</label>
-            <input type="text" id="cust-cpf" value="${cust ? cust.cpf || '' : ''}" class="w-full h-10 px-3 bg-surface-container-low rounded-lg text-sm text-on-surface focus:outline-none border border-surface-container-high" placeholder="123.456.789-00" />
+            <input type="text" id="cust-cpf" maxlength="14" value="${cust ? formatCPF(cust.cpf || '') : ''}" class="w-full h-10 px-3 bg-surface-container-low rounded-lg text-sm text-on-surface focus:outline-none border border-surface-container-high" placeholder="123.456.789-00" />
           </div>
         </div>
 
         <div class="flex flex-col gap-1">
           <label class="text-xs font-bold text-outline uppercase tracking-wider">Telefone / WhatsApp</label>
-          <input type="text" id="cust-phone" value="${cust ? cust.phone || '' : ''}" class="w-full h-10 px-3 bg-surface-container-low rounded-lg text-sm text-on-surface focus:outline-none border border-surface-container-high" placeholder="(11) 98765-4321" />
+          <input type="text" id="cust-phone" maxlength="15" value="${cust ? formatPhone(cust.phone || '') : ''}" class="w-full h-10 px-3 bg-surface-container-low rounded-lg text-sm text-on-surface focus:outline-none border border-surface-container-high" placeholder="(11) 98765-4321" />
         </div>
 
         <div class="flex flex-col gap-1">
@@ -1714,6 +1750,21 @@ function openCustomerModal(customerId = null) {
   `;
 
   openModal(modalHtml);
+
+  // Setup mask event listeners
+  const cpfInput = document.getElementById('cust-cpf');
+  if (cpfInput) {
+    cpfInput.addEventListener('input', (e) => {
+      e.target.value = formatCPF(e.target.value);
+    });
+  }
+
+  const phoneInput = document.getElementById('cust-phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      e.target.value = formatPhone(e.target.value);
+    });
+  }
 }
 
 async function handleCustomerSubmit(e, customerId) {
@@ -1732,6 +1783,7 @@ async function handleCustomerSubmit(e, customerId) {
       await supabaseFetch(`customers?id=eq.${customerId}`, { method: 'PATCH', body });
       showToast("Cliente atualizado!");
     } else {
+      body.id = crypto.randomUUID();
       await supabaseFetch('customers', { method: 'POST', body });
       showToast("Cliente cadastrado com sucesso!");
     }
